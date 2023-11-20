@@ -1,0 +1,10 @@
+a{
+    background-color: aqua;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    border: 20px black;
+}
