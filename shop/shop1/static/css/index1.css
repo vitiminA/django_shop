@@ -1,0 +1,73 @@
+.ad_product {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+form {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#id_body {
+    width: 100%;
+}
+input[type="submit"] {
+    background-color: #3466db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #063351;
+}
+.redrect{
+    color: #333;
+    position: relative;
+    z-index: 1;
+    width: 100px;
+    background-color: burlywood;
+    text-decoration: none;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.redrect:hover{
+    background-color: rgb(193, 137, 64);
+}
