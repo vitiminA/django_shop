@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="{% static 'css/ad_product.css' %}">
 </head>
 <body>
+    <a class="home" href="{% url 'index:index' %}">Trang chủ</a>
+    <div class="form">
+        {% for post in pm %}
+        <img class="img_product" src="{{post.image.url}}" alt="" />
+        <a class="title_product" href="">{{ post.title }}</a>
+        <p>{{ post.body }}</p>
+        {% endfor %}
+    </div>
 
-    {% for post in pm %}
-    <img width="250px" height="290px" src="{{post.image.url}}" alt="" />
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.body }}</p>
-    
-    {% endfor %}
-    <a href="{% url 'index:index' %}">Trang chủ</a>
 </body>
 </html>

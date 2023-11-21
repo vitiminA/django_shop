@@ -36,7 +36,13 @@
                 </div>
                 <a href="{% url 'UserMember:privatePage' %}" class="nav-item nav-link">Đăng xuất</a>
             </div>
-            <div><a href="{% url 'UserMember:loginUser' %}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login</a><i class="fa fa-arrow-right ms-3"></i></a>
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'UserMember:logout' %}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Logout</a>
+                {% else %}
+                    <a href="{% url 'UserMember:loginUser' %}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login</a>
+                {% endif %}
+                <!-- <a href="{% url 'UserMember:loginUser' %}" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login</a><i class="fa fa-arrow-right ms-3"></i></a> -->
                 
             </div>
             
@@ -50,7 +56,7 @@
             <ul>
                 {% for item in pm %}
                 <li>
-                    <img src="{{item.image.url}}" alt="" />
+                    <img class="img_index" src="{{item.image.url}}" alt="" />
                     <a href="">{{item.title}} &raquo;</a>
                 </li>
                 {% endfor %}

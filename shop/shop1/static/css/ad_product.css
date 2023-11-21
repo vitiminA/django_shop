@@ -1,5 +1,5 @@
-a{
-    background-color: aqua;
+a.home {
+    background-color: rgb(42, 165, 155);
     color: black;
     font-size: 40px;
     font-weight: bold;
@@ -7,4 +7,25 @@ a{
     padding: 20px;
     border-radius: 20px;
     border: 20px black;
+}
+
+div.form {
+    width: 250px;
+    text-align: center;
+}
+
+img.img_product {
+    width: 250px;
+    height: 290px;
+    margin: 10px;
+}
+
+a.title_product {
+    font-weight: bold;
+    font-size: large;
+    border-radius: 5px;
+    border: 2px solid black;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(113, 97, 97);
 }

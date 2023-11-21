@@ -131,7 +131,7 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 #Xử lý session khi đăng xuất sẽ xóa session
-SESSION_ENGINE = 'django.contrib.sessions.backends.db'
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 #đặt thời gian session tự xóa (ms)
-# SESSION_COOKIE_AGE = 3600
+SESSION_COOKIE_AGE = 3600
