@@ -1,0 +1,62 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#img_all {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#img_all div {
+    flex-basis: 45%; /* Chia cột làm 45% rộng */
+}
+
+#img_all img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#back_home {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #3498db;
+    text-decoration: none;
+}
+
+#back_home:hover {
+    text-decoration: underline;
+}

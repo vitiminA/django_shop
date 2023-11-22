@@ -1,0 +1,36 @@
+<!-- edit_product.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/edit_product.css' %}">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h1>Edit Product</h1>
+    <div>
+        <form method="post" enctype="multipart/form-data" action="{% url 'index:edit_product' product.id %}">
+            {% csrf_token %}
+            <!-- hiển thị hình ảnh để nhìn trự quan hơn -->
+            {{ form.as_p }}
+            <div id="img_all">
+                <div>
+                    <h2>Xem trước hình ảnh</h2>
+                    <img id="image-preview" src="" alt="Preview" width="150" height="170">
+                </div>
+            </div>
+
+            <button type="submit">Lưu thay đổi</button>
+        </form>
+        <br>
+        <a id="back_home" href="{% url 'index:ad_product' %}">Back to Product List</a>
+    </div>
+
+    <script src="{% static 'js/display_img.js' %}">
+    </script>
+    
+</body>
+</html>

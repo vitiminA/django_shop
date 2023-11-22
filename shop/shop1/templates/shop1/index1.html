@@ -12,11 +12,15 @@
             <form action="{% url 'index:index1' %}" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ pn.as_p }}
+                <img id="image-preview" src="" alt="Preview" width="300" height="300">
                 <input type="submit" value="Submit">
             </form>
             <a class="redrect" href="{% url 'index:ad_product' %}">Trang quản trị sản phẩm </a>
             <a class="redrect" href="{% url 'index:index' %}">Trang chủ </a>
         </div>
+
+        <script src="{% static 'js/display_img.js' %}">
+        </script>
 
 </body>
 </html>

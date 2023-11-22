@@ -22,7 +22,7 @@
 #     pm =  post_Model
 #     return render(request, 'shop1/index1.html', {'pn':pm})
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.views import View
 from .models import postModel
@@ -70,4 +70,26 @@ class Get_template_names(LoginRequiredMixin, View):
     def get(self, request):
         pm = postModel.objects.all()
         return render(request, 'shop1/ad_product.html', {'pm': pm})
+    
+# Sửa sản phẩm 
+@login_required(login_url="/login/")
+def edit_product(request, product_id):
+    product = get_object_or_404(postModel, id=product_id)
+    
+    if request.method == 'POST':
+        form = post_Model(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('index:ad_product')
+    else:
+        form = post_Model(instance=product)
+
+    return render(request, 'shop1/edit_product.html', {'form': form, 'product': product})
+
+# Xóa sản phẩm
+@login_required(login_url="/login/")
+def delete_product(request, product_id):
+    product = get_object_or_404(postModel, id=product_id)
+    product.delete()
+    return redirect('/ad_product/')  # Chuyển hướng đến trang quản lý sản phẩm sau khi xóa
 
