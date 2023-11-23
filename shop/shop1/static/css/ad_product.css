@@ -1,4 +1,4 @@
-/* a.home {
+a.home {
     background-color: rgb(42, 165, 155);
     color: black;
     font-size: 40px;
@@ -42,4 +42,7 @@ a.bt_product {
     text-decoration: none;
     color: rgb(0, 0, 0);
     background-color: rgb(113, 97, 97);
-} */
+}
+br {
+    /* margin: 10px; */
+}

@@ -1,63 +1,21 @@
+{% extends 'shop1/base.html' %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block title %}
+    <title>X-Phone</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'img/logoo.png' %}" style="border-radius: 50%;">
     <link rel="stylesheet" href="{% static 'css/ad_product.css' %}">
+    {% endblock %}
     <style>
-         a.home {
-    background-color: rgb(42, 165, 155);
-    color: black;
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 20px;
-    border-radius: 20px;
-    border: 20px black;
-}
-
-div.form {
-    margin-top: 50px;
-    width: 250px;
-    text-align: center;
-    align-items: center;
-}
-
-.add_product {
-    color: black;
-    text-decoration: none;
-    font-size: x-large;
-    font-weight: 900;
-    background-color: antiquewhite;
-    padding: 10px;
-    border-radius: 7px;
-    margin: 10px;
-
-}
-
-img.img_product {
-    width: 250px;
-    height: 250px;
-    margin: 10px;
-}
-
-a.bt_product {
-    font-weight: bold;
-    font-size: large;
-    border-radius: 5px;
-    border: 2px solid black;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    background-color: rgb(113, 97, 97);
-}
-br {
-    /* margin: 10px; */
-}
+         
     </style>
 </head>
 <body>
+    {% block contend %}
     <a class="home" href="{% url 'index:index' %}">Trang chủ</a>
     <div class="form">
         <a class="add_product" href="/index1/">Thêm sản phẩm</a>
@@ -73,6 +31,7 @@ br {
         </div>
         {% endfor %}
     </div>
+    {% endblock %}
     
 </body>
 </html>
